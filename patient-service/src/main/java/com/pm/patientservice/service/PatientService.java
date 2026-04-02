@@ -17,10 +17,14 @@ public class PatientService {
         this.patientRepository = patientRepository;
     }
 
+//    public List<Patient> findAll() {
+//        return patientRepository.findAll();
+//    }
+
     public List<PatientResponseDTO> getPatients (){
         List<Patient> patients = patientRepository.findAll();
         List<PatientResponseDTO> patientResponseDTOs = patients.stream()
-                .map(patient -> PatientMapper.toDo(patient)).toList();
+                .map(PatientMapper::toDTO).toList();
         return patientResponseDTOs;
     }
 }
