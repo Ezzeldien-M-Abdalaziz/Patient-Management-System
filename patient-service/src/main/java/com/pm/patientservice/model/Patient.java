@@ -30,7 +30,8 @@ public class Patient {
     private LocalDate dateOfBirth;
 
     @NotNull
-    private LocalDate registerDate;
+//    @Column(name = "registered_date")
+    private LocalDate registeredDate;
 
 
     public UUID getId() {
@@ -73,12 +74,12 @@ public class Patient {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public LocalDate getRegisterDate() {
-        return registerDate;
+    public LocalDate getRegisteredDate() {
+        return registeredDate;
     }
 
-    public void setRegisterDate(LocalDate registerDate) {
-        this.registerDate = registerDate;
+    public void setRegisteredDate(LocalDate registeredDate) {
+        this.registeredDate = registeredDate;
     }
 
 }
