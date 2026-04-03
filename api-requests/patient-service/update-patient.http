@@ -1,0 +1,12 @@
+### put request to update patient information
+PUT http://localhost:4000/patients/223e4567-e89b-12d3-a456-426614174011
+Content-Type: application/json
+
+{
+  "name": "ezz",
+  "email": "ezz@example.com",
+  "address" : "123 Main St, Anytown, USA",
+  "dateOfBirth": "1990-01-01"
+}
+
+###
